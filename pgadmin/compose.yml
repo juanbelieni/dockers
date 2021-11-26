@@ -1,0 +1,14 @@
+services:
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    ports:
+      - 8080:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "juanbelieni@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "docker"
+
+networks:
+  default:
+    external: true
+    name: base
